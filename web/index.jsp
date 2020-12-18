@@ -3,7 +3,6 @@
     Created on : 17/12/2020, 19:53:52
     Author     : francisco
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +12,6 @@
     </head>
     <body>
         <h1>Principal</h1>
-        <a href="#">Perfil</a>
+        <a href="listar_perfil.jsp">Perfil</a>
     </body>
 </html>
