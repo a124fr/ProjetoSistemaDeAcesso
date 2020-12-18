@@ -37,7 +37,12 @@ public class PerfilDAO extends DataBaseDAO {
    }
     
    public void excluir(int id) throws Exception {
-       
+       String sql = "DELETE FROM perfil WHERE id = ?";
+       this.conectar();
+       PreparedStatement ps = conn.prepareStatement(sql);
+       ps.setInt(1, id);
+       ps.execute();
+       this.desconectar();
    }
    
 }

@@ -18,7 +18,7 @@
             
             Descrição:<textarea name="descricao" required></textarea><br/>
             
-            <input type="submit" value="Inserir" />
+            <input type="submit" value="Salvar" /> | <a href="listar_perfil.jsp">Voltar</a>
         </form>
     </body>
 </html>

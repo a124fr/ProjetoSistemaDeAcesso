@@ -4,9 +4,17 @@
         <servlet-name>InserirPerfil</servlet-name>
         <servlet-class>controller.InserirPerfil</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ExcluirPerfil</servlet-name>
+        <servlet-class>controller.ExcluirPerfil</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InserirPerfil</servlet-name>
         <url-pattern>/inserir_perfil.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExcluirPerfil</servlet-name>
+        <url-pattern>/excluir_perfil.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

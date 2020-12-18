@@ -6,10 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Perfil;
 import model.PerfilDAO;
 
-public class InserirPerfil extends HttpServlet {
+public class ExcluirPerfil extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -28,25 +27,19 @@ public class InserirPerfil extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet InserirPerfil</title>");            
+            out.println("<title>Servlet ExcluirPerfil</title>");            
             out.println("</head>");
             out.println("<body>");
             
             try {
-                String nome = request.getParameter("nome");
-                String descricao = request.getParameter("descricao");
-                
-                Perfil p = new Perfil();                
-                p.setNome(nome);
-                p.setDescricao(descricao);
-                
+                int id = Integer.parseInt(request.getParameter("id"));
                 PerfilDAO pDAO = new PerfilDAO();
-                pDAO.inserir(p);
+                pDAO.excluir(id);
                 
-                response.sendRedirect("listar_perfil.jsp");                
+                response.sendRedirect("listar_perfil.jsp");
             } catch (Exception e) {
                 out.println("ERRO: " + e);
-            }           
+            }
             
             out.println("</body>");
             out.println("</html>");
