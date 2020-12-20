@@ -50,8 +50,7 @@
                     <td><%=p.getNome() %></td>
                     <td><%=p.getDescricao() %></td>
                     <td>
-                        <img src="assets/images/edit.png" />
-                        
+                        <a href="form_alterar_perfil.jsp?id=<%=p.getId() %>"><img src="assets/images/edit.png" /></a>
                         <a href="#" onclick="excluir(<%=p.getId() %>, '<%=p.getNome() %>');"><img src="assets/images/delete.png" /></a>
                     </td>
                 </tr>

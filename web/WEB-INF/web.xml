@@ -8,6 +8,10 @@
         <servlet-name>ExcluirPerfil</servlet-name>
         <servlet-class>controller.ExcluirPerfil</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AlterarPerfil</servlet-name>
+        <servlet-class>controller.AlterarPerfil</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InserirPerfil</servlet-name>
         <url-pattern>/inserir_perfil.do</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ExcluirPerfil</servlet-name>
         <url-pattern>/excluir_perfil.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarPerfil</servlet-name>
+        <url-pattern>/alterar_perfil.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
