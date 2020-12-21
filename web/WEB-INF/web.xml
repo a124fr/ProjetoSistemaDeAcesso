@@ -24,6 +24,10 @@
         <servlet-name>AlterarMenu</servlet-name>
         <servlet-class>controller.AlterarMenu</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InserirUsuario</servlet-name>
+        <servlet-class>controller.InserirUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InserirPerfil</servlet-name>
         <url-pattern>/inserir_perfil.do</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>AlterarMenu</servlet-name>
         <url-pattern>/alterar_menu.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InserirUsuario</servlet-name>
+        <url-pattern>/inserir_usuario.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

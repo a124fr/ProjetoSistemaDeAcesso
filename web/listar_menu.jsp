@@ -35,8 +35,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
+                    <th>ID</th>                    
                     <th>Título</th>
                     <th>Link</th>
                     <th>Icone</th>
