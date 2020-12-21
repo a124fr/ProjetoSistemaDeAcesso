@@ -51,7 +51,20 @@
                     <td><%=u.getId() %></td>
                     <td><%=u.getNome() %></td>
                     <td><%=u.getLogin() %></td>
-                    <td><%=u.getSituacao() %></td>
+                    <td>
+                        <%
+                           if( u.getSituacao().equals("Ok") ) {
+                        %>
+                            <a href="gerenciar_situacao_usuario.do?id=<%=u.getId() %>&op=0"><img src="assets/images/ok.png" /></a>
+                        <%
+                           } else {
+                        %>
+                            <a href="gerenciar_situacao_usuario.do?id=<%=u.getId() %>&op=1"><img src="assets/images/nok.png" /></a>
+                        <%       
+                           }
+                        
+                        %>                    
+                    </td>
                     <td><%=u.getPerfil().getNome() %></td>
                     <td>
                         <a href="form_alterar_usuario.jsp?id=<%=u.getId() %>"><img src="assets/images/edit.png" /></a>

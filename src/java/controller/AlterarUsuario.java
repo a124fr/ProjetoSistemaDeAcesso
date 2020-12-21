@@ -10,7 +10,7 @@ import model.Perfil;
 import model.Usuario;
 import model.UsuarioDAO;
 
-public class InserirUsuario extends HttpServlet {
+public class AlterarUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,11 +29,12 @@ public class InserirUsuario extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet InserirUsuario</title>");            
+            out.println("<title>Servlet AlterarUsuario</title>");            
             out.println("</head>");
             out.println("<body>");
             
-            try {
+             try {
+                int id = Integer.parseInt(request.getParameter("id"));
                 String nome = request.getParameter("nome");
                 String login = request.getParameter("login");
                 String senha = request.getParameter("senha");
@@ -42,14 +43,15 @@ public class InserirUsuario extends HttpServlet {
                 Perfil p = new Perfil();
                 p.setId(id_perfil);
                 
-                Usuario u = new Usuario();                
+                Usuario u = new Usuario();
+                u.setId(id);
                 u.setNome(nome);
                 u.setLogin(login);
                 u.setSenha(senha);
                 u.setPerfil(p);
                 
                 UsuarioDAO uDAO = new UsuarioDAO();
-                uDAO.inserir(u);
+                uDAO.alterar(u);
                 
                 response.sendRedirect("listar_usuario.jsp");                
             } catch (Exception e) {

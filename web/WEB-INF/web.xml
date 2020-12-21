@@ -28,6 +28,18 @@
         <servlet-name>InserirUsuario</servlet-name>
         <servlet-class>controller.InserirUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ExcluirUsuario</servlet-name>
+        <servlet-class>controller.ExcluirUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlterarUsuario</servlet-name>
+        <servlet-class>controller.AlterarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GerenciarSituacaoUsuario</servlet-name>
+        <servlet-class>controller.GerenciarSituacaoUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InserirPerfil</servlet-name>
         <url-pattern>/inserir_perfil.do</url-pattern>
@@ -55,6 +67,18 @@
     <servlet-mapping>
         <servlet-name>InserirUsuario</servlet-name>
         <url-pattern>/inserir_usuario.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExcluirUsuario</servlet-name>
+        <url-pattern>/excluir_usuario.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarUsuario</servlet-name>
+        <url-pattern>/alterar_usuario.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GerenciarSituacaoUsuario</servlet-name>
+        <url-pattern>/gerenciar_situacao_usuario.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

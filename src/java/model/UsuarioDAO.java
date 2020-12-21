@@ -81,6 +81,22 @@ public class UsuarioDAO extends DataBaseDAO {
         ps.execute();
         this.desconectar();
     }
+    
+    public void alterarSituacao(int id, int op) throws Exception {
+        String sql = "UPDATE usuario SET situacao = ? WHERE id = ?";
+        this.conectar();
+        PreparedStatement ps = conn.prepareStatement(sql);        
+        
+        String situacao = "Ok";        
+        if(op == 0) {
+            situacao = "nOk";
+        }
+        
+        ps.setString(1, situacao);
+        ps.setInt(2, id);
+        ps.execute();
+        this.desconectar();
+    }
 
     public void excluir(int id) throws Exception {
         String sql = "DELETE FROM usuario WHERE id = ?";

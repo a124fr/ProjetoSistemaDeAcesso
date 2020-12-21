@@ -6,11 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Perfil;
-import model.Usuario;
 import model.UsuarioDAO;
 
-public class InserirUsuario extends HttpServlet {
+public class GerenciarSituacaoUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,29 +27,18 @@ public class InserirUsuario extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet InserirUsuario</title>");            
+            out.println("<title>Servlet GerenciarSituacaoUsuario</title>");            
             out.println("</head>");
             out.println("<body>");
             
             try {
-                String nome = request.getParameter("nome");
-                String login = request.getParameter("login");
-                String senha = request.getParameter("senha");
-                int id_perfil = Integer.parseInt(request.getParameter("id_perfil"));
-                
-                Perfil p = new Perfil();
-                p.setId(id_perfil);
-                
-                Usuario u = new Usuario();                
-                u.setNome(nome);
-                u.setLogin(login);
-                u.setSenha(senha);
-                u.setPerfil(p);
+                int id = Integer.parseInt(request.getParameter("id"));
+                int op = Integer.parseInt(request.getParameter("op"));
                 
                 UsuarioDAO uDAO = new UsuarioDAO();
-                uDAO.inserir(u);
+                uDAO.alterarSituacao(id, op);
                 
-                response.sendRedirect("listar_usuario.jsp");                
+                response.sendRedirect("listar_usuario.jsp");
             } catch (Exception e) {
                 out.println("ERRO: " + e);
             }
