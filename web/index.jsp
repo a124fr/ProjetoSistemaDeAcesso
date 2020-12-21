@@ -12,6 +12,8 @@
     </head>
     <body>
         <h1>Principal</h1>
-        <a href="listar_perfil.jsp">Perfil</a>
+        <a href="listar_perfil.jsp">Perfis</a>
+        |
+        <a href="listar_menu.jsp">Menus</a>
     </body>
 </html>
