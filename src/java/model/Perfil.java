@@ -1,9 +1,12 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Perfil {
     private int id;
     private String nome;
     private String descricao;
+    private ArrayList<Menu> menus;
 
     public int getId() {
         return id;
@@ -28,4 +31,12 @@ public class Perfil {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }    
+
+    public ArrayList<Menu> getMenus() {
+        return menus;
+    }
+
+    public void setMenus(ArrayList<Menu> menus) {
+        this.menus = menus;
+    }
 }

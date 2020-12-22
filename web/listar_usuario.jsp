@@ -55,7 +55,7 @@
                         <%
                            if( u.getSituacao().equals("Ok") ) {
                         %>
-                            <a href="gerenciar_situacao_usuario.do?id=<%=u.getId() %>&op=0"><img src="assets/images/ok.png" /></a>
+                        <a href="gerenciar_situacao_usuario.do?id=<%=u.getId() %>&op=0"><img src="assets/images/ok.png" /></a>
                         <%
                            } else {
                         %>

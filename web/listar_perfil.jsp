@@ -52,6 +52,8 @@
                     <td>
                         <a href="form_alterar_perfil.jsp?id=<%=p.getId() %>"><img src="assets/images/edit.png" /></a>
                         <a href="#" onclick="excluir(<%=p.getId() %>, '<%=p.getNome() %>');"><img src="assets/images/delete.png" /></a>
+                        
+                        <a href="form_gerenciar_menu_perfil.jsp?id=<%=p.getId() %>"><img src="assets/images/menu.png" width="20" /></a>
                     </td>
                 </tr>
             <%

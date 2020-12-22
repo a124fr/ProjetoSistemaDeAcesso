@@ -40,6 +40,10 @@
         <servlet-name>GerenciarSituacaoUsuario</servlet-name>
         <servlet-class>controller.GerenciarSituacaoUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GerenciarMenuPerfil</servlet-name>
+        <servlet-class>controller.GerenciarMenuPerfil</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InserirPerfil</servlet-name>
         <url-pattern>/inserir_perfil.do</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>GerenciarSituacaoUsuario</servlet-name>
         <url-pattern>/gerenciar_situacao_usuario.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GerenciarMenuPerfil</servlet-name>
+        <url-pattern>/gerenciar_menu_perfil.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
