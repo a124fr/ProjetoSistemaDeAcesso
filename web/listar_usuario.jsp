@@ -31,6 +31,7 @@
         </script>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Lista de Usuario <a href="form_inserir_usuario.jsp"><img src="assets/images/add.png" /></a> </h1>
         <table>
             <thead>

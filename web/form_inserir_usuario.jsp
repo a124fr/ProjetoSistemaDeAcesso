@@ -24,6 +24,7 @@
         <title>Novo Usuário</title>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Novo Usuário</h1>
         <form name="novo_usuario" method="POST" action="inserir_usuario.do">
             Nome:<input type="text" name="nome" required /><br/>

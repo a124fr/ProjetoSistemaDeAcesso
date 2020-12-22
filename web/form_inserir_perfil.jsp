@@ -12,6 +12,7 @@
         <title>Novo Perfil</title>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Novo Perfil</h1>
         <form name="novo_perfil" method="POST" action="inserir_perfil.do">
             Nome:<input type="text" name="nome" required /><br/>

@@ -55,6 +55,32 @@ public class UsuarioDAO extends DataBaseDAO {
         this.desconectar();
         return usuario;
     }
+    
+    public Usuario logar(String login, String senha) throws Exception {
+        Usuario usuario = new Usuario();
+        
+        String sql = "SELECT * FROM usuario WHERE situacao = 'Ok' AND login = ?";
+        this.conectar();
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, login);
+        ResultSet rs = ps.executeQuery();
+        
+        if(rs.next()) {            
+            if(senha.equals(rs.getString("senha"))){
+                usuario.setId(rs.getInt("id"));
+                usuario.setNome(rs.getString("nome"));
+                usuario.setLogin(rs.getString("login"));
+                usuario.setSenha(rs.getString("senha"));
+                usuario.setSituacao(rs.getString("situacao"));
+
+                PerfilDAO pDAO = new PerfilDAO();
+                usuario.setPerfil(pDAO.carregarPorId(rs.getInt("id_perfil")));
+            }            
+        }
+        
+        this.desconectar();
+        return usuario;
+    }
 
     public void inserir(Usuario u) throws Exception {
         String sql = "INSERT INTO usuario (nome, login, senha, situacao, id_perfil) VALUES (?,?,?,?,?)";

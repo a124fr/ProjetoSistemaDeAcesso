@@ -12,6 +12,7 @@
         <title>Novo Menu</title>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Novo Menu</h1>
         <form name="novo_menu" method="POST" action="inserir_menu.do">
             Título:<input type="text" name="titulo" required /><br/>

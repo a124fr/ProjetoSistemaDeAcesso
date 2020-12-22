@@ -26,6 +26,7 @@
         <title>Alterar Menu</title>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Alterar Menu</h1>
         <form name="novo_menu" method="POST" action="alterar_menu.do">
             <input type="hidden" name="id" value="<%=m.getId() %>"/>

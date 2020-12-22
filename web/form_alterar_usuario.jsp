@@ -32,6 +32,7 @@
         <title>Alterar Usuário</title>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Alterar Usuário</h1>
         <form name="alterar_usuario" method="POST" action="alterar_usuario.do">
             <input type="hidden" name="id" value="<%=u.getId() %>" />

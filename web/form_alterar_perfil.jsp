@@ -26,6 +26,7 @@
         <title>Alterar Perfil</title>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Alterar Perfil</h1>
         <form name="alterar_perfil" method="POST" action="alterar_perfil.do">
             ID: <%=p.getId() %> <br/>

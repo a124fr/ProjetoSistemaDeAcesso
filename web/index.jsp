@@ -11,11 +11,8 @@
         <title>Principal</title>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Principal</h1>
-        <a href="listar_perfil.jsp">Perfis</a>
-        |
-        <a href="listar_menu.jsp">Menus</a>
-        |
-        <a href="listar_usuario.jsp">Usuários</a>
+        
     </body>
 </html>

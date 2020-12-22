@@ -44,6 +44,10 @@
         <servlet-name>GerenciarMenuPerfil</servlet-name>
         <servlet-class>controller.GerenciarMenuPerfil</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ValidaLogin</servlet-name>
+        <servlet-class>controller.ValidaLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InserirPerfil</servlet-name>
         <url-pattern>/inserir_perfil.do</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>GerenciarMenuPerfil</servlet-name>
         <url-pattern>/gerenciar_menu_perfil.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValidaLogin</servlet-name>
+        <url-pattern>/valida_login.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

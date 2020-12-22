@@ -30,6 +30,7 @@
         <title>Gerenciar Menu Perfil</title>
     </head>
     <body>
+        <%@include  file="banner.jsp" %>
         <h1>Gerenciar Menu Perfil</h1>
         <form name="menu_perfil" method="POST" action="gerenciar_menu_perfil.do">
             <strong>ID:</strong> <%=p.getId() %> 
